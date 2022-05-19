@@ -1,0 +1,12 @@
+<center>
+<h1>Show</h1>
+<%= @user.name %>
+<br>
+<%= @user.email %><br>
+<%= @user.address %><br>
+<%= @user.age %><br>
+<button><%= link_to "EditForm", edit_user_path(@user) %></button>
+<button><%= link_to "Delete", user_path(@user),remote: true, data: { turbo_method: :delete , turbo_confirm: "Are You Sure ?"} %></button>
+<hr style="color: darkgreen;">
+</center>
+<button><%= link_to " UsersHome" , users_path %></button>

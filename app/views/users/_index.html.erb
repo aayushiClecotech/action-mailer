@@ -1,0 +1,13 @@
+<% @users.each do |user| %>
+	<div class="user_<%= user.id %>">
+		<%= user.name %>
+		<br>
+		<%= link_to user.email, user %><br>
+		<%= user.address %><br>
+		<%= user.age %><br>
+		<%= link_to "ShowUsers", user_path(user), remote: true ,class:"btn btn-outline-success btn-sm"%>
+		|| <%= link_to "EditForm", edit_user_path(user), remote: true ,class:"btn btn-outline-info btn-sm"%>
+		|| <%= link_to "Delete", user_path(user),remote: true, method: :delete ,class:"btn btn-outline-danger btn-sm"%>
+		<hr style="color: darkgreen;">
+	</div>
+<% end %>

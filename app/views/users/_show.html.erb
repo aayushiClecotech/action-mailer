@@ -1,9 +1,13 @@
 <h1 style="color: lightseagreen;">Show</h1>
+
+destroy_user_session
 <%= @user.name %>
 <br>
 <%= @user.email %><br>
+<%= @user.password %><br>
+<%= @user.password_confirmation %><br>
 <%= @user.address %><br>
 <%= @user.age %><br>
-<%= link_to "EditForm", edit_user_path(@user), remote: true , class:"btn btn-outline-info btn-sm" %>
-|| <%= link_to "Delete", user_path(@user),remote: true, method: :delete,class:"btn btn-outline-danger btn-sm" %>
+<%= link_to "EditForm", edit_user_path(@user), remote: true , class:"btn btn-outline-info btn-rounded btn-sm" %>
+|| <%= link_to "Delete", user_path(@user),remote: true, method: :delete,class:"btn btn-outline-danger btn-rounded btn-sm" %>
 <hr style="color: darkgreen;">
